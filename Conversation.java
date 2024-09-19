@@ -1,9 +1,14 @@
+import java.util.Scanner;
 public class Conversation {
   //Attributes
-  String input;
   int rounds;
  
   public static void main(String[] arguments) {
+    Scanner scan = new Scanner(System.in);
+    int rounds = scan.nextInt();
+    System.out.println(rounds);
     // You will start the conversation here.
+    System.out.println("How many rounds?");
+      
   }
 }
