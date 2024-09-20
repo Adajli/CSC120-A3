@@ -10,8 +10,12 @@ public class Conversation {
     System.out.println("How many rounds would you like??");
     int rounds = input.nextInt(); //asks for number of rounds  
     input.nextLine();
-    for(int i = 0; i<=rounds;i++){
-
+    System.out.println("Hello, what's on your mind?");
+    for(int i = 0; i<rounds;i++){
+      String response = input.next(); //asks for response
+      input.nextLine();
+      
+        
     }
     System.out.println("I was so delighted to talk to you.");
   }
