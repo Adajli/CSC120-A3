@@ -12,29 +12,29 @@ public class Conversation {
     int rounds = input.nextInt(); //asks for number of rounds
     
     input.nextLine();
-    System.out.println("Hello, what's on your mind?");
+    System.out.println("Hello, what's on your mind?");// Asks intro question.
     for(int i = 0; i<rounds;i++){
       String response = input.nextLine(); //asks for response
       boolean match = false;  
-      for(int j = 0; j < mirrorWords.length; j++){
+      for(int j = 0; j < mirrorWords.length; j++){ //Loops through array to check for mirror words.
         for(int k = 0; k < mirrorWords[j].length; k++){
           if(response.toLowerCase().contains(mirrorWords[j][k])){
             int spaceIndex = response.indexOf(" ");
             String out = mirrorWords[j][k].toUpperCase();
             if (spaceIndex >= 0) {
-              out += response.substring(spaceIndex); // Append the rest of the response after the space
+              out += response.substring(spaceIndex); // Appends the rest of the response after the space
             }
             match = true;
-            System.out.println(out);
+            System.out.println(out); //Prints output of line.
           }
         }   
       } 
       if(!match){
         int responseIndex = (int) (Math.random()*cannedResponses.length);
-        System.out.println(cannedResponses[responseIndex]);
+        System.out.println(cannedResponses[responseIndex]); //Prints response if no matching words to mirror.
       }
       
     }
-    System.out.println("I was so delighted to talk to you.");  
+    System.out.println("I was so delighted to talk to you."); // Ends conversation. 
   }
 }
