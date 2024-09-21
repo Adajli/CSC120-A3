@@ -22,7 +22,7 @@ public class Conversation {
             int spaceIndex = response.indexOf(" ");
             String out = mirrorWords[j][k].toUpperCase();
             if (spaceIndex >= 0) {
-                out += response.substring(spaceIndex); // Append the rest of the response after the space
+              out += response.substring(spaceIndex); // Append the rest of the response after the space
             }
             match = true;
             System.out.println(out);
