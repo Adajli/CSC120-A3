@@ -20,7 +20,7 @@ public class Conversation {
         for(int k = 0; k < mirrorWords[j].length; k++){
           if(response.toLowerCase().contains(mirrorWords[j][k])){
             int spaceIndex = response.indexOf(" ");
-            String out = mirrorWords[j][k];
+            String out = mirrorWords[j][k].toUpperCase();
             if (spaceIndex >= 0) {
                 out += response.substring(spaceIndex); // Append the rest of the response after the space
             }
