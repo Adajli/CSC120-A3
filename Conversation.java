@@ -26,12 +26,8 @@ public class Conversation {
             }
             match = true;
             System.out.println(out);
-            break;
           }
-        }
-        if(match==true){
-          break;
-        }
+        }   
       } 
       if(!match){
         int responseIndex = (int) (Math.random()*cannedResponses.length);
