@@ -1,3 +1,4 @@
+import java.util.Arrays;
 import java.util.Scanner;
 public class Conversation {
   //Attributes
@@ -29,20 +30,21 @@ public class Conversation {
     public static String mirror(String response){
       String [][] mirrorWords = {{"i", "you"} ,{"am", "are"},{ "my", "your"}, {"me", "you"},{"i'm", "you're"}, {".", "?"} };
       String [] out = response.split(" ");
+
       for(int l = 0; l<out.length;l++){ //Runs through response variable.
         for(int j = 0; j<mirrorWords.length;j++){
-            if(out[l].toLowerCase().contains(mirrorWords[j][0])){
+          System.out.println(out[l].toLowerCase());
+            if(out[l].toLowerCase().equals(mirrorWords[j][0])){
               out[l] = mirrorWords[j][1];
-             
             }         
           } 
        }
-      
-      String outResult = "";
+      System.out.println(Arrays.toString(out));
+      String outResult = " ";
       for(int k = 0; k<out.length;k++){
-        outResult += out[k];
+        outResult += out[k] + " ";
       }
-      return outResult;
+      return outResult.trim();
     }
 } 
     
