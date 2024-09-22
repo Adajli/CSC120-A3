@@ -25,19 +25,19 @@ public class Conversation {
               if (spaceIndex >= 0) {
                 out += response.substring(spaceIndex); // Appends the rest of the response after the space
               }
-              match = true;                
+              match = true; 
+              
             }
           }    
         } 
       }
-      
+      System.out.println(out); //Prints output of line.     
       if(!match){
         int responseIndex = (int) (Math.random()*cannedResponses.length);
-        out = cannedResponses[responseIndex];
+        System.out.println(cannedResponses[responseIndex]);
       }
-      
     }
-    System.out.println(out); //Prints output of line.   
+   
     System.out.println("I was so delighted to talk to you."); // Ends conversation. 
   }
 }
