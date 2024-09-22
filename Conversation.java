@@ -31,7 +31,7 @@ public class Conversation {
           }    
         } 
       }
-      System.out.println(out); //Prints output of line.     
+      System.out.println(out); //Prints output of line.
       if(!match){
         int responseIndex = (int) (Math.random()*cannedResponses.length);
         System.out.println(cannedResponses[responseIndex]);
