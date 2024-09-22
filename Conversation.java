@@ -15,31 +15,34 @@ public class Conversation {
     System.out.println("Hello, what's on your mind?");// Asks intro question.
     for(int i = 0; i<rounds;i++){
       String response = input.nextLine(); //asks for response
-      mirror(response);
-      int responseIndex = (int) (Math.random()*cannedResponses.length);
-      System.out.println(cannedResponses[responseIndex]); 
+      if(response.contains("Nothing")){
+        int responseIndex = (int) (Math.random()*cannedResponses.length);
+        System.out.println(cannedResponses[responseIndex]); 
+      }else{
+        System.out.println(mirror(response));
+      }
       } 
       //System.out.println(out);   
       System.out.println("I was so delighted to talk to you."); // Ends conversation. 
     }
 
-    public void mirror(String response){
+    public static String mirror(String response){
       String [][] mirrorWords = {{"i", "you"} ,{"am", "are"},{ "my", "your"}, {"me", "you"},{"i'm", "you're"}, {".", "?"} };
-      String out = "";
-      for(int l = 0; l<response.length();l++){ //Runs through response variable.
+      String [] out = response.split(" ");
+      for(int l = 0; l<out.length;l++){ //Runs through response variable.
         for(int j = 0; j<mirrorWords.length;j++){
-          for(int k = 0; k<mirrorWords[j].length;k++){
-            if(response.toLowerCase().contains(mirrorWords[j][k])){
-              response += mirrorWords[j][k];
-              int spaceIndex = response.indexOf(" ");
-              if (spaceIndex >= 0) {
-                out += response.substring(spaceIndex, response.indexOf(".")); // Appends the rest of the response after the space
-              }  
+            if(out[l].toLowerCase().contains(mirrorWords[j][0])){
+              out[l] = mirrorWords[j][1];
+             
             }         
           } 
        }
+      
+      String outResult = "";
+      for(int k = 0; k<out.length;k++){
+        outResult += out[k];
       }
-      System.out.println(out);
+      return outResult;
     }
 } 
     
