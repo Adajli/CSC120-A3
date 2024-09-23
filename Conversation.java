@@ -38,9 +38,7 @@ public class Conversation {
     }
     input.close();
     input2.close();
-
-       
-    //System.out.println(out);   
+  
     
   }
 

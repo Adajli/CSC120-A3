@@ -9,4 +9,4 @@ Use this file to record your reflection on this assignment.
 - Can you draw any conclusion about programming in general from the similarities or the differences between the two languages? 
   I can draw conclusion that programming requires planning out functions and debugging regardless of language even though the syntaxes are different.
 - What worked, what didn't, what advice would you give someone taking this course in the future?
-  
+  What worked is that I was able to get the chatbot to follow a conversation in 2 responses as well as the printing of the transcript. What didn't work is getting the words you and me to mirror each other. I would advice that person to try to solve the problem by themselves before asking a buddy or getting tutoring hours.
