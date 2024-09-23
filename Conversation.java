@@ -54,7 +54,7 @@ public class Conversation {
       } 
     }
       
-    StringBuilder outResult = new StringBuilder();  //Idea of changing String to StringBuilder and generating toString for another variable from chatGPT.
+    StringBuilder outResult = new StringBuilder();  //Idea of changing String to StringBuilder and generating toString for another variable from chatGPT, but I did not copy and paste the parts to change the function.
     for(int k = 0; k<out.length;k++){
       if(k== out.length-1){
         outResult.append(out[k]);
