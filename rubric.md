@@ -12,7 +12,7 @@ Listed below are various aspects of the assignment.  When you turn in your work,
 
 ### Level 1 (4 pts)
 
-_____ 1 pt: `reflection.md` lists the classmates you consulted & TA hours attended
+__**YES**___ 1 pt: `reflection.md` lists the classmates you consulted & TA hours attended
 
 __**YES**___ 1 pt: Program queries user for number of conversation rounds
 
@@ -30,15 +30,15 @@ __**YES**___ 1 pt: Replaces simple mirror words appropriately (unpunctuated, low
 
 ### Level 3 (3 pts)
 
-_____ 1 pt: Makes all appropriate mirror replacements
+__**YES**___ 1 pt: Makes all appropriate mirror replacements
 
-_____ 1 pt: Stores transcript of the conversation in an array
+__**YES**___ 1 pt: Stores transcript of the conversation in an array
 
-_____ 1 pt: Prints transcript when terminating
+__**YES**___ 1 pt: Prints transcript when terminating
 
 ## Kudos:
 
-_____ (Kudos!) Handles mirror words with punctuation
+__**YES**___ (Kudos!) Handles mirror words with punctuation
 
 _____ (Kudos!) Generates output with correct punctuation & capitalization
 
@@ -48,11 +48,11 @@ _____ (Kudos!) Handles you --> me/I dilemma
 
 ## General Items:
 
-_____ 4 pts: Programs compile without errors or warnings
+__**YES**___ 4 pts: Programs compile without errors or warnings
 
-_____ 2 pts: Executes fully & consistently without crashing (exception/freeze)
+_**YES**____ 2 pts: Executes fully & consistently without crashing (exception/freeze)
 
-_____ 2 pt: Complies with style guidelines (missing items 1 pt each):
+__**YES**___ 2 pt: Complies with style guidelines (missing items 1 pt each):
 
       _____ Classes & class members all have Javadoc header comments
 

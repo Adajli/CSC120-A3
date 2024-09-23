@@ -1,3 +1,4 @@
+import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.Scanner;
 public class Conversation {
@@ -9,39 +10,36 @@ public class Conversation {
   public static void main(String[] arguments) {
     Scanner input = new Scanner(System.in);
     String [] cannedResponses = {"Interesting", "Mm-hm", "Can you talk more about that?", "Oh really?"};
-    String transcript = "";
+    ArrayList<String> transcript = new ArrayList<String>();
     // You will start the conversation here.
     System.out.println("How many rounds would you like?? ");
-    transcript += "How many rounds would you like?? \n";
     int rounds = input.nextInt(); //asks for number of rounds
-    transcript += rounds;
     System.out.println("Hello, what's on your mind?");// Asks intro question.
-    transcript +="Hello, what's on your mind?\n";
+    transcript.add("Hello, what's on your mind?\n");
     Scanner input2 = new Scanner(System.in);
     for(int i = 0; i<rounds;i++){
       String response = input2.nextLine(); //asks for response
-      
-      //System.out.println("In loop");
-      //String response = input.nextLine(); //asks for response
-      //System.out.println("Response: "+response);  
-      //System.out.println("Response2: "+mirror(response));   
+      transcript.add(response + "\n");
       String response2 = mirror(response);
-      transcript += response2 +"\n";
+      
+      // transcript.add(response2 +"\n");
       //String response2 = "m";
       
-      if(response2.equals(response)){
+      if(response2.substring(0,response.length()-1).equals(response.substring(0,response.length()-1)) ){
         int responseIndex = (int) (Math.random()*cannedResponses.length);
         System.out.println(cannedResponses[responseIndex]); 
-        transcript += cannedResponses[responseIndex]+"\n";
+        transcript.add(cannedResponses[responseIndex]+"\n");
       }else{   
         System.out.println(mirror(response));
-        transcript += mirror(response)+"\n";
+        transcript.add(mirror(response)+"\n");
       } 
     }
     System.out.println("I was so delighted to talk to you."); // Ends conversation. 
-    transcript += "I was so delighted to talk to you.\n";
-    System.out.println("Transcript");
-    System.out.println(transcript);
+    transcript.add( "I was so delighted to talk to you.\n");
+    System.out.println("Transcript:");
+    for(int i = 0; i<transcript.size();i++){
+      System.out.print(transcript.get(i));
+    }
     input.close();
     input2.close();
 
@@ -51,7 +49,7 @@ public class Conversation {
   }
 
     public static String mirror(String response){
-      String [][] mirrorWords = {{"i", "you"} ,{"am", "are"},{ "my", "your"}, {"me", "you"},{"i'm", "you're"} };
+      String [][] mirrorWords = {{"i", "you"} ,{"am", "are"},{ "my", "your"}, {"me", "you"},{"i'm", "you're"}, {"i'd", "you'd"}};
       String [] out = response.split(" ");
 
       for(int l = 0; l<out.length;l++){ //Runs through response variable.
@@ -71,6 +69,10 @@ public class Conversation {
           outResult += out[k] + " ";
         }
       }
+      if(outResult.contains(".")){
+        outResult = outResult.replace('.','?');
+      }
+      //System.out.println(outResult.contains("."));
       return outResult;
     }
 } 
