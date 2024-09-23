@@ -42,7 +42,7 @@ __**YES**___ (Kudos!) Handles mirror words with punctuation
 
 _**YES**____ (Kudos!) Generates output with correct punctuation & capitalization
 
-_____ (Kudos!) Handles you --> me/I dilemma
+__**PART**___ (Kudos!) Handles you --> me/I dilemma
 
 
 
