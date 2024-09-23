@@ -12,11 +12,11 @@ public class Conversation {
     String transcript = "";
     // You will start the conversation here.
     System.out.println("How many rounds would you like?? ");
-    transcript += "How many rounds would you like?? ";
+    transcript += "How many rounds would you like?? \n";
     int rounds = input.nextInt(); //asks for number of rounds
     transcript += rounds;
     System.out.println("Hello, what's on your mind?");// Asks intro question.
-    transcript +="Hello, what's on your mind?";
+    transcript +="Hello, what's on your mind?\n";
     Scanner input2 = new Scanner(System.in);
     for(int i = 0; i<rounds;i++){
       String response = input2.nextLine(); //asks for response
@@ -26,25 +26,28 @@ public class Conversation {
       //System.out.println("Response: "+response);  
       //System.out.println("Response2: "+mirror(response));   
       String response2 = mirror(response);
-      transcript +=response2;
+      transcript += response2 +"\n";
       //String response2 = "m";
       
       if(response2.equals(response)){
         int responseIndex = (int) (Math.random()*cannedResponses.length);
         System.out.println(cannedResponses[responseIndex]); 
-        transcript +=cannedResponses[responseIndex];
+        transcript += cannedResponses[responseIndex]+"\n";
       }else{   
         System.out.println(mirror(response));
-        transcript += mirror(response);
+        transcript += mirror(response)+"\n";
       } 
     }
+    System.out.println("I was so delighted to talk to you."); // Ends conversation. 
+    transcript += "I was so delighted to talk to you.\n";
+    System.out.println("Transcript");
     System.out.println(transcript);
     input.close();
     input2.close();
 
        
     //System.out.println(out);   
-    System.out.println("I was so delighted to talk to you."); // Ends conversation. 
+    
   }
 
     public static String mirror(String response){
