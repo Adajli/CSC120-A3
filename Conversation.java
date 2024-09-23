@@ -44,36 +44,34 @@ public class Conversation {
     
   }
 
-    public static String mirror(String response){ //Mirrors words
-      String [][] mirrorWords = {{"i", "you"} ,{"am", "are"},{ "my", "your"}, {"me", "you"},{"i'm", "you're"}, {"i'd", "you'd"},{"you", "me"}};
-      String [] out = response.split(" ");
+  public static String mirror(String response){ //Mirrors words
+    String [][] mirrorWords = {{"i", "you"} ,{"am", "are"},{ "my", "your"}, {"me", "you"},{"i'm", "you're"}, {"i'd", "you'd"},{"you", "me"}};
+    String [] out = response.split(" ");
 
-      for(int l = 0; l<out.length;l++){ //Runs through response variable.
-        for(int j = 0; j<mirrorWords.length;j++){
-          //System.out.println(out[l].toLowerCase());
-            if(out[l].toLowerCase().equals(mirrorWords[j][0])){
-              out[l] = mirrorWords[j][1];
-            }         
-          } 
-       }
-      
-      StringBuilder outResult = new StringBuilder();
-      for(int k = 0; k<out.length;k++){
-        if(k== out.length-1){
-          outResult.append(out[k]);
-        }else{
-          outResult.append(out[k] + " ");
-        }
-      }
-      String result = outResult.toString();
-      result = result.substring(0,1).toUpperCase()+ result.substring(1);
-      if(result.contains(".")){
-        result = result.replace('.','?');
-      }
-      
-      //System.out.println(outResult.contains("."));
-      return result;
+    for(int l = 0; l<out.length;l++){ //Runs through response variable.
+      for(int j = 0; j<mirrorWords.length;j++){
+        if(out[l].toLowerCase().equals(mirrorWords[j][0])){
+          out[l] = mirrorWords[j][1];
+        }         
+      } 
     }
+      
+    StringBuilder outResult = new StringBuilder();
+    for(int k = 0; k<out.length;k++){
+      if(k== out.length-1){
+        outResult.append(out[k]);
+      }else{
+        outResult.append(out[k] + " ");
+      }
+    }
+    String result = outResult.toString();
+    result = result.substring(0,1).toUpperCase()+ result.substring(1);
+    if(result.contains(".")){
+      result = result.replace('.','?');
+    }
+      
+    return result;
+  }
 } 
     
     
