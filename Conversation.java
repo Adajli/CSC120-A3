@@ -43,7 +43,8 @@ public class Conversation {
   }
 
   public static String mirror(String response){ //Mirrors words
-    String [][] mirrorWords = {{"i", "you"} ,{"am", "are"},{ "my", "your"}, {"me", "you"},{"i'm", "you're"}, {"i'd", "you'd"},{"you", "me"}};
+    String [][] mirrorWords = {{"i", "you"} ,{"am", "are"},{ "my", "your"}, {"me", "you"},{"i'm", "you're"}, {"i'd", "you'd"},{"you", "me"},
+  {"was", "were"}};
     String [] out = response.split(" ");
 
     for(int l = 0; l<out.length;l++){ //Runs through response variable.
