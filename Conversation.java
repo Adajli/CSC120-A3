@@ -47,7 +47,7 @@ public class Conversation {
   {"was", "were"}};
     String [] out = response.split(" ");
 
-    for(int l = 0; l<out.length;l++){ //Runs through response variable.
+    for(int l = 0; l<out.length;l++){ //Runs through out array
       for(int j = 0; j<mirrorWords.length;j++){
         if(out[l].toLowerCase().equals(mirrorWords[j][0])){
           out[l] = mirrorWords[j][1];
