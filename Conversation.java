@@ -11,17 +11,17 @@ public class Conversation {
     Scanner input = new Scanner(System.in);
     String [] cannedResponses = {"Interesting", "Mm-hm", "Can you talk more about that?", "Oh really?"};
     ArrayList<String> transcript = new ArrayList<String>();
-    // You will start the conversation here.
+    /*You will start the conversation here.*/
     System.out.println("How many rounds would you like?? ");
     int rounds = input.nextInt(); //asks for number of rounds
-    System.out.println("Hello, what's on your mind?");// Asks intro question.
-    transcript.add("Hello, what's on your mind?\n");
+    System.out.println("Hello, what's on your mind?");/*Asks intro question. */
+    transcript.add("Hello, what's on your mind?\n");/*Adds intro question to transcript. */
     Scanner input2 = new Scanner(System.in);
     for(int i = 0; i<rounds;i++){
-      String response = input2.nextLine(); //asks for response
-      transcript.add(response + "\n");
+      String response = input2.nextLine();/*Asks for response input */
+      transcript.add(response + "\n"); /*Adds responses to transcript. */
       String response2 = mirror(response);
-      if(response2.substring(0,response.length()-1).equals(response.substring(0,response.length()-1))){
+      if(response2.substring(0,response.length()-1).equals(response.substring(0,response.length()-1))){ /*Checks for mirror words */
         int responseIndex = (int) (Math.random()*cannedResponses.length);
         System.out.println(cannedResponses[responseIndex]); 
         transcript.add(cannedResponses[responseIndex]+"\n");
@@ -30,10 +30,10 @@ public class Conversation {
         transcript.add(mirror(response)+"\n");
       } 
     }
-    System.out.println("I was so delighted to talk to you."); // Ends conversation. 
+    System.out.println("I was so delighted to talk to you."); /*Ends conversation. */
     transcript.add( "I was so delighted to talk to you.\n");
     System.out.println("Transcript:");
-    for(int i = 0; i<transcript.size();i++){// Prints out full transcript.
+    for(int i = 0; i<transcript.size();i++){/* Prints out full transcript. */
       System.out.print(transcript.get(i));
     }
     input.close();
@@ -66,7 +66,7 @@ public class Conversation {
     String result = outResult.toString();
     result = result.substring(0,1).toUpperCase()+ result.substring(1);
     if(result.contains(".")){
-      result = result.replace('.','?');
+      result = result.replace('.','?'); /* Replaces . with ? to continue conversation */
     }
       
     return result;
