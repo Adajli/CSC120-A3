@@ -5,12 +5,18 @@ public class Conversation {
   int rounds;
 
  
- 
+  /**
+   * Conversation takes in attributes of rounds
+   * prints only the response and returns nothing.
+   */
   public static void main(String[] arguments) {
     Scanner input = new Scanner(System.in);
     String [] cannedResponses = {"Interesting", "Mm-hm", "Can you talk more about that?", "Oh really?"};
     ArrayList<String> transcript = new ArrayList<String>();
-    /*You will start the conversation here.*/
+    /**
+     * You will start the conversation here.
+     * 
+     */
     System.out.println("How many rounds would you like?? ");
     int rounds = input.nextInt(); //asks for number of rounds
     System.out.println("Hello, what's on your mind?");/*Asks intro question. */
