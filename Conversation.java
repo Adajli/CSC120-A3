@@ -47,12 +47,12 @@ public class Conversation {
     
   }
 
-  public static String mirror(String response){ //Mirrors words
+  public static String mirror(String response){ /** Mirrors words */
     String [][] mirrorWords = {{"i", "you"} ,{"am", "are"},{ "my", "your"}, {"me", "you"},{"i'm", "you're"}, {"i'd", "you'd"},{"you", "me"},
   {"was", "were"}};
     String [] out = response.split(" ");
 
-    for(int l = 0; l<out.length;l++){ //Runs through out array
+    for(int l = 0; l<out.length;l++){ /** Runs through out array */
       for(int j = 0; j<mirrorWords.length;j++){
         if(out[l].toLowerCase().equals(mirrorWords[j][0])){
           out[l] = mirrorWords[j][1];
@@ -60,7 +60,7 @@ public class Conversation {
       } 
     }
       
-    StringBuilder outResult = new StringBuilder();  //Idea of changing String to StringBuilder and generating toString for another variable from chatGPT for kudos part of handling capitalization, but I did not copy and paste the parts to change the function.
+    StringBuilder outResult = new StringBuilder();  /** Idea of changing String to StringBuilder and generating toString for another variable from chatGPT for kudos part of handling capitalization, but I did not copy and paste the parts to change the function. */
     for(int k = 0; k<out.length;k++){
       if(k== out.length-1){
         outResult.append(out[k]);
@@ -71,7 +71,7 @@ public class Conversation {
     String result = outResult.toString();
     result = result.substring(0,1).toUpperCase()+ result.substring(1);
     if(result.contains(".")){
-      result = result.replace('.','?'); /* Replaces . with ? to continue conversation */
+      result = result.replace('.','?'); /** Replaces . with ? to continue conversation */
     }
       
     return result;
