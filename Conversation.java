@@ -19,11 +19,11 @@ public class Conversation {
      */
     System.out.println("How many rounds would you like?? ");
     int rounds = input.nextInt(); /** asks for number of rounds */
+    input.nextLine();
     System.out.println("Hello, what's on your mind?");/** Asks intro question. */
     transcript.add("Hello, what's on your mind?\n");/** Adds intro question to transcript. */
-    Scanner input2 = new Scanner(System.in);
     for(int i = 0; i<rounds;i++){
-      String response = input2.nextLine();/** Asks for response input */
+      String response = input.nextLine();/** Asks for response input */
       transcript.add(response + "\n"); /** Adds responses to transcript. */
       String response2 = mirror(response);
       if(response2.substring(0,response.length()-1).equals(response.substring(0,response.length()-1))){ /*Checks for mirror words */
@@ -42,13 +42,12 @@ public class Conversation {
       System.out.print(transcript.get(i));
     }
     input.close();
-    input2.close();
   
     
   }
 
   public static String mirror(String response){ /** Mirrors words */
-    String [][] mirrorWords = {{"i", "you"} ,{"am", "are"},{ "my", "your"}, {"me", "you"},{"i'm", "you're"}, {"i'd", "you'd"},{"you", "me"},
+    String [][] mirrorWords = {{"i", "you"} ,{"am", "are"},{ "my", "your"}, {"me", "you"},{"i'm", "you're"}, {"i'd", "you'd"},
   {"was", "were"}};
     String [] out = response.split(" ");
 
