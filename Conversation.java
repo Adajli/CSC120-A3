@@ -48,18 +48,19 @@ public class Conversation {
 
   public static String mirror(String response){ /** Mirrors words */
     String [][] mirrorWords = {{"i", "you"} ,{"am", "are"},{ "my", "your"}, {"me", "you"},{"i'm", "you're"}, {"i'd", "you'd"},
-  {"was", "were"},{"are", "am"}, {"your", "my"},{"you","me"}, {"you","i"}};
+  {"was", "were"},{"are", "am"}, {"your", "my"},{"you","me"}, {"you",}};
     String [] out = response.split(" ");
 
     for(int l = 0; l<out.length;l++){ /** Runs through out array */
       for(int j = 0; j<mirrorWords.length;j++){
         if(out[l].toLowerCase().equals(mirrorWords[j][0])){
           out[l] = mirrorWords[j][1];
+          if(out[l].toLowerCase().equals("i") && out[l+1].toLowerCase().equals("am") && l<mirrorWords.length-1){
+            out[l]= "you";
+            out[l+1] = "are";
+          }  
         }
-        if(out[l].toLowerCase().equals("i") && out[l+1].toLowerCase().equals("am") && l<mirrorWords.length-1){
-          out[l]= "you";
-          out[l+1] = "are";
-        }         
+               
       } 
     }
       
