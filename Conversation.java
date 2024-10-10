@@ -61,9 +61,9 @@ public class Conversation {
           if(out[l].toLowerCase().equals("i") && out[l+1].toLowerCase().equals("am") && l<mirrorWords.length-1){
             out[l]= "you";
             out[l+1] = "are";
-          }else if(out[l].toLowerCase().equals("i") && out[l+1].toLowerCase().equals("am") && l<mirrorWords.length-1){
-            out[l]= "you";
-            out[l+1] = "are";
+          }else if(out[l].toLowerCase().equals("you") && out[l+1].toLowerCase().equals("me") && l<mirrorWords.length-1){
+            out[l]= "me";
+            out[l+1] = "you";
           }else{
             out[l] = mirrorWords[j][1];
           }  
