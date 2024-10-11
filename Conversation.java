@@ -12,23 +12,23 @@ public class Conversation {
   /**
    * Conversation takes in attributes of rounds
    * prints only the response and returns nothing.
+   * @param nothing
+   * @return void
    */
   public static void main(String[] arguments) {
     Scanner input = new Scanner(System.in);
     String [] cannedResponses = {"Interesting", "Mm-hm", "Can you talk more about that?", "Oh really?"};
     ArrayList<String> transcript = new ArrayList<String>();
-    /**
-     * You will start the conversation here.
-     * 
-     */
+    //You will start the conversation here.
+     
     System.out.println("How many rounds would you like?? ");
-    int rounds = input.nextInt(); /** asks for number of rounds */
+    int rounds = input.nextInt(); // asks for number of rounds 
     input.nextLine();
-    System.out.println("Hello, what's on your mind?");/** Asks intro question. */
-    transcript.add("Hello, what's on your mind?\n");/** Adds intro question to transcript. */
+    System.out.println("Hello, what's on your mind?");// Asks intro question. 
+    transcript.add("Hello, what's on your mind?\n");// Adds intro question to transcript. 
     for(int i = 0; i<rounds;i++){
-      String response = input.nextLine();/** Asks for response input */
-      transcript.add(response + "\n"); /** Adds responses to transcript. */
+      String response = input.nextLine();// Asks for response input 
+      transcript.add(response + "\n"); // Adds responses to transcript. 
       String response2 = mirror(response);
       if(response2.substring(0,response.length()-1).equals(response.substring(0,response.length()-1))){ /*Checks for mirror words */
         int responseIndex = (int) (Math.random()*cannedResponses.length);
@@ -50,7 +50,7 @@ public class Conversation {
     
   }
 
-  public static String mirror(String response){ /** Mirrors words */
+  public static String mirror(String response){ // Mirrors words 
     String [][] mirrorWords = {{"i", "you"} ,{"am", "are"},{ "my", "your"}, {"me", "you"},{"i'm", "you're"}, {"i'd", "you'd"},
   {"was", "were"},{"are", "am"}, {"your", "my"},{"you","me"}};
     String [] out = response.split(" ");
