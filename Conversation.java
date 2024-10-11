@@ -39,11 +39,13 @@ public class Conversation {
         transcript.add(mirror(response)+"\n");
       } 
     }
+  
+    String[] fullTranscript = transcript.toArray(new String[transcript.size()]);
     System.out.println("I was so delighted to talk to you."); /** Ends conversation. */
     transcript.add( "I was so delighted to talk to you.\n");
     System.out.println("Transcript:");
-    for(int i = 0; i<transcript.size();i++){/** Prints out full transcript. */
-      System.out.print(transcript.get(i));
+    for(int i = 0; i<transcript.size();i++){// Prints out full transcript. */
+      System.out.print(fullTranscript);
     }
     input.close();
   
