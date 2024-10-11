@@ -12,8 +12,8 @@ public class Conversation {
   /**
    * Conversation takes in attributes of rounds
    * prints only the response and returns nothing.
-   * @param empty
-   * @return void
+   * @params arguments
+   *  
    */
   public static void main(String[] arguments) {
     Scanner input = new Scanner(System.in);
