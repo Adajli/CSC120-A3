@@ -45,7 +45,7 @@ public class Conversation {
     transcript.add( "I was so delighted to talk to you.\n");
     System.out.println("Transcript:");
     for(int i = 0; i<transcript.size();i++){// Prints out full transcript. */
-      System.out.print(fullTranscript);
+      System.out.print(fullTranscript[i]);
     }
     input.close();
   
