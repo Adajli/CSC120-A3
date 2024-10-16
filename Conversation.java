@@ -12,7 +12,7 @@ public class Conversation {
   /**
    * Conversation takes in attributes of rounds
    * prints only the response and returns nothing.
-   * @params arguments
+   * @param arguments
    * @return void 
    */
   public static void main(String[] arguments) {
