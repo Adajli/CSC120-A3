@@ -11,7 +11,6 @@ public class Conversation {
  
   /**
    * Conversation takes in attributes of rounds
-   * prints only the response and returns nothing.
    * @param arguments
    * @return void 
    */
@@ -51,7 +50,11 @@ public class Conversation {
   
     
   }
-
+  /**
+   * Conversation mirrors statement in response
+   * @param response
+   * @return mirror term as String 
+   */
   public static String mirror(String response){ // Mirrors words 
     String [][] mirrorWords = {{"i", "you"} ,{"am", "are"},{ "my", "your"}, {"me", "you"},{"i'm", "you're"}, {"i'd", "you'd"},
   {"was", "were"},{"are", "am"}, {"your", "my"},{"you","me"}};
